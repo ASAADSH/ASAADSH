@@ -1,0 +1,240 @@
+body
+{
+	margin: 0;
+	padding: 0;
+	cursor: url('imges/im.png'), text;	
+	overflow:hidden;
+}
+body:before
+{
+	content: '';
+	display: block;
+    position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	background: url(imges/back.png) repeat-x bottom left;	  
+}
+@keyframes dogMove {
+  from {left:0px;}
+	to {left:450px;}
+}
+
+
+
+@keyframes dogWalk {
+	0% { background-position:0px 0px; }
+	3% { background-position:-120px 0px; }
+	6% { background-position:-240px 0px; }
+	9% { background-position:-360px 0px; }	
+	12% { background-position:0px 0px; }
+	15% { background-position:-120px 0px; }
+	18% { background-position:-240px 0px; }
+	21% { background-position:-360px 0px; }	
+	24% { background-position:0px 0px; }
+	27% { background-position:-120px 0px; }
+	30% { background-position:-240px 0px; }
+	33% { background-position:-360px 0px; }	
+	36% { background-position:0px 0px; }
+	39% { background-position:-120px 0px; }
+	42% { background-position:-240px 0px; }
+	45% { background-position:-360px 0px; }	
+	48% { background-position:0px 0px; }
+	51% { background-position:-120px 0px; }
+	54% { background-position:-240px 0px; }
+	57% { background-position:-360px 0px; }	
+	60% { background-position:0px 0px; }
+	63% { background-position:-120px 0px; }
+	66% { background-position:-240px 0px; }
+	69% { background-position:-360px 0px;  } /* Walk */
+
+	72% { background-position:-480px 0px; }  /* Snif  */
+	75% { background-position:-360px 0px;  }
+	78% { background-position:-480px 0px;  }
+	81% { background-position:-360px 0px;  }
+	
+	90% { background-position:-0px -110px; } /* Find */
+	93% {background-position:-120px -110px;} /* Jump */
+	96% {background-position:-240px -110px;}
+	100% { background-position: 1000px 1000px; }/*Hide*/
+}
+
+
+
+@keyframes dogLaugh {
+	0% { background-position:-360px -110px; }
+	50% { background-position:-480px -110px; }
+	100% { background-position:-360px -110px; }
+}
+
+
+@keyframes dogShow {
+	0% { top:560px; }
+	25% { top: 480px; }
+	75% { top: 480px; }
+	100% { top:560px; }
+}
+
+
+@keyframes lvlStart {
+	from {left:5000px;}
+	to {left:0px;}
+}
+
+
+@keyframes lvlEnd {
+	from {left:0px;}
+	to {left:5000px;}
+}
+
+@keyframes duckWing { 
+	0% { background-position:0px -220px; }
+	33% { background-position:-85px -220px; }
+	66% { background-position:-170px -220px; }
+	100% { background-position:-170px -220px; }
+}
+@keyframes duckfly
+{
+	0%
+	{
+		left: 150%;
+		top: 10%;
+	}
+	5%
+	{
+		left: 140%;
+		top: 100%;
+	}6%
+	{
+		left: 138%;
+		top: 40%;
+	}8%
+	{
+		left: 101%;
+		top: 1%;
+	}10%
+	{
+		left: 98%;
+		top: 19%;
+	}
+	15%
+	{
+		left: 90%;
+		top: 50%;
+	}
+	25%
+	{
+		left: 80%;
+		top: 45%;
+	}
+	50%
+	{
+		left: 50%;
+		top: 30%;
+	}
+	75%
+	{
+		left: 40%;
+		top: 30%;
+	}
+	100%
+	{
+		left: -50%;
+		top: 10%;
+	}
+}
+input + label
+{
+	position: absolute;
+	left: -100px;
+	z-index: 1;
+	width: 36px;
+	height: 100px;
+	display: block;
+	z-index: 5;
+	transform: translate(-50%,-50%);
+	background: url(imges/duck_black.png) no-repeat left center;
+	background-position: -138px 0; 
+}
+input:checked + label
+{
+	opacity: 100%;
+	transition: 1.2s;
+	transform: rotate(180deg);
+	transform-origin: 60%;
+	z-index: -5;
+}
+.duck:nth-last-of-type(1)
+{
+	animation: duckfly 10s rotate 2s infinite;
+	cursor: url('imges/im.png'), text;	
+}
+.duck:nth-last-of-type(2)
+{
+	animation: duckfly 20s linear 2.5s infinite;
+	cursor: url('imges/im.png'), text;	
+}
+.duck:nth-last-of-type(3)
+{
+	animation: duckfly 30s linear 1.5s infinite;
+	cursor: url('imges/im.png'), text;	
+}
+.duck:nth-last-of-type(4)
+{
+	animation: duckfly 40s linear 9s infinite;
+	cursor: url('imges/im.png'), text;	
+}
+.duck:nth-last-of-type(5)
+{
+	animation: duckfly 50s linear 6s infinite;
+	cursor: url('imges/im.png'), text;	
+}
+.duck:nth-last-of-type(6)
+{
+	animation: duckfly	55s linear 6s infinite;
+	cursor: url('imges/im.png'), text;	
+}.duck:nth-last-of-type(7)
+{
+	animation: duckfly 45s linear 4s infinite;
+	cursor: url('imges/im.png'), text;	
+}.duck:nth-last-of-type(8)
+{
+	animation: duckfly 11s linear 4s infinite;
+	cursor: url('imges/im.png'), text;	
+}.duck:nth-last-of-type(9)
+{
+	animation: duckfly 6s linear 4s infinite;
+	cursor: url('imges/im.png'), text;	
+}.duck:nth-last-of-type(10)
+{
+	animation: duckfly 10s linear 10s infinite;
+	cursor: url('imges/im.png'), text;	
+}
+.score
+{
+	position: absolute;
+	bottom: 0;
+	height: 50px;
+	line-height: 50px;
+	background-color: #dedede;
+	width: 100%;
+	z-index: 2;
+	text-align: center;
+	font-size: 30px;
+}	
+.score:after
+{
+	content: counter(score);
+	display: inline-block;
+}
+.score:before
+{
+	content:'SCORE:';
+	display: inline-block;
+	margin-right: 10px;
+}
+input:checked
+{
+	counter-increment: score;
+}
+
